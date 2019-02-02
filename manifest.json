@@ -1,0 +1,24 @@
+{
+    "manifest_version":2,//固定的
+    "name":"chrome插件消息交互机制",//插件名称
+    "description":"剔除换行",//插件的描述
+    "version":"1.0",//插件使用的版本
+    "permissions":[ //允许插件访问的url
+        "https://translate.google.cn/*",
+    	"contextMenus"
+        ],
+    "browser_action":{//插件加载后生成图标
+        "default_icon":"icon.png",//图标的图片
+        "default_title": "Hello！" ,//鼠标移到图标显示的文字 
+        "default_popup": "po.html" //单击图标执行的文件
+
+        },
+    "background": {//background script即插件运行的环境
+        "scripts": ["js/bg.js"]//数组.chrome会在扩展启动时自动创建一个包含所有指定脚本的页面
+      },
+    "content_scripts":[{   //对页面内容进行操作的脚本定义
+    	"matches":["*://translate.google.cn/*"],   //满足什么条件执行该插件即Content Script注入的Web页面
+        "js":["js/o.js","js/jquery.js","js/content_script.js"],//注入到匹配的Web页面中的JS文件，顺序相关
+        "run_at": "document_start"//在document加载时执行该脚本  
+     }]
+}
