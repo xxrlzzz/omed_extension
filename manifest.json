@@ -5,10 +5,12 @@
     "version": "1.0",
     "permissions": [
         "contextMenus",
+        "tabs",
         "http://127.0.0.1:8989/*",
         "https://chromium-review.googlesource.com/*",
         "https://codereview.chromium.org/*",
-        "https://cs.chromium.org/*"
+        "https://cs.chromium.org/*",
+        "https://source.chromium.org/*"
     ],
     "browser_action": {
         "default_icon": "icon.png"
@@ -16,7 +18,20 @@
     "background": {
         "scripts": [
             "js/jquery.js",
-            "js/bg.js"
+            "js/bg.js",
+            "js/content_script.js"
         ]
-    }
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "js/content_script.js"
+            ],
+            "matches": [
+                "https://cs.chromium.org/*",
+                "https://source.chromium.org/*"
+            ],
+            "run_at": "document_start"
+        }
+    ]
 }
