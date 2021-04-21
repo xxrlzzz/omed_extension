@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <script src="popup.js" type="module">
+  </script>
+
+  <style>
+    label {
+      font-size: 1rem;
+      padding-right: 10px;
+    }
+
+    select {
+      font-size: .9rem;
+      padding: 2px 5px;
+    }
+
+    #cur_ide {
+      font-style: italic;
+      font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 style="border: auto;">欢迎使用OpenMyEditor </h2>
+
+  <!-- 自定义你的url规则和打开规则 <br> -->
+
+  <form>
+    <label for="input">选择你的ide(请确保它在path中)</label>
+    <select id="ide_select">
+      <option value="vscode">vscode</option>
+      <option value="idea">idea</option>
+      <option value="goland">goland</option>
+      <option value="clion">clion</option>
+    </select>
+    <button id="url_btn">confirm</button>
+  </form>
+
+  <span id="message" hidden></span>
+
+  <div>当前打开ide: <span id="cur_ide">vscode</span></div>
+</body>
+
+</html>

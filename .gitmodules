@@ -1,0 +1,3 @@
+[submodule "omed_server"]
+	path = omed_server
+	url = git@github.com:xxrlzzz/omed_server.git
