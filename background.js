@@ -3,7 +3,6 @@ class ChromiumHandler {
 	// https://source.chromium.org/chromium/chromium/src/+/master:cc/animation/animation.h;l=9	
 	constructor(url) {
 		this.url = url
-		debugger
 		url = url.replace("https://source.chromium.org/","")
 		url = url.split(':')
 		let projectAndBranch = url[0]
@@ -15,7 +14,7 @@ class ChromiumHandler {
 		if (!url) return
 
 		let file = url.split(';')[0]
-		let line = url.split(';l=')[1].split(';')[0].split("?")[0]
+		let line = url.split(';l=')?.[1]?.split(';')?.[0]?.split("?")[0]
 		if (!file) return
 
 		if (!line)
