@@ -1,0 +1,45 @@
+.content {
+	width: 400px;
+	height: 300px;
+	font-size: 12pt;
+}
+
+.switch-wrapper {
+	display: flex;
+}
+
+.switch-wrapper input {
+	display: none;
+}
+
+.switch-wrapper label {
+	position: relative;
+	background: grey;
+	cursor: pointer;
+	width: 30px;
+	height: 20px;
+	border-radius: 100px;
+	display: inline-block;
+}
+
+.switch-wrapper label::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: white;
+	transition: all 0.36s;
+	top: 0px;
+	left: 0px;
+}
+
+.switch-wrapper input:checked+label {
+	background: green;
+}
+
+.switch-wrapper input:checked+label::before {
+	left: calc(100%);
+	transform: translateX(-100%);
+	transition: all .36s cubic-bezier(.78, .14, .15, .86);
+}

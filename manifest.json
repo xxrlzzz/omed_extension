@@ -10,16 +10,17 @@
         "scripting"
     ],
     "action": {
-        "default_icon": "icon.png",
-        "default_title": "ome",
+        "default_icon": "iconv2.png",
+        "default_title": "omed",
         "default_popup": "popup.html"
     },
     "background": {
-        "service_worker":  "background.js"
+        "service_worker": "background.js",
+        "type": "module"
     },
     "host_permissions": [
         "http://127.0.0.1:8989/*",
-        "https://source.chromium.org/*"
+        "https://source.chromium.org/*",
+        "https://cs.android.com/*"
     ]
-    
 }

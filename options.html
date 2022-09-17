@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./libs/jquery.js" type="text/javascript"></script>
+    <script src="options.js" type="module"></script>
+    <title>Omed选项</title>
+</head>
+
+<body>
+    <div id="header">
+        设置本地路径
+    </div>
+
+    <div id="tabRulesBody" class="tab" style="display:block;">
+        <div id="switchRules">
+            <table id="configListTable" class="rulesTable">
+                <tr class="tableHeader">
+                    <th style="width:10%">
+                        <span>项目类型</span>
+                    </th>
+                    <th style="width:25%">
+                        <span>项目名称</span>
+                    </th>
+                    <th style="width:25%">
+                        <span>本地存储路径</span>
+                    </th>
+                </tr>
+            </table>
+
+            <div style="text-align:right;">
+                <hr>
+                <button class="button" id="saveConfig" label="save">
+                    保存
+                </button>
+                <button class="button" id="addNewLine" label="add">
+                    添加一行
+                </button>
+                <button class="button" id="removeLine" label="remove">
+                    删除最后一行
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
