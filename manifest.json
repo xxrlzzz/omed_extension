@@ -10,7 +10,7 @@
         "scripting"
     ],
     "action": {
-        "default_icon": "iconv2.png",
+        "default_icon": "logov2.png",
         "default_title": "omed",
         "default_popup": "popup.html"
     },
